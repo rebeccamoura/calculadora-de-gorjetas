@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+/* body */
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+}
+
+/* header */
+
+header h1 {
+    text-align: center;
+    margin: 30px 0px;
+    letter-spacing: 3px;
+}
+
+header h1 span {
+    display: block;
+}
+
+/* main */
+
+
+/* main erro */
+
+main div.error {
+    background-color: rgb(216, 59, 59);
+    display: none;
+}
+
+main div.error p {
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* main tip calculator */
+
+main div.tipCalculator {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 800px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+/* main tip calcualtor form */
+
+main form label {
+    display: block;
+}
+
+main form input[type="radio"] {
+    width: 90px;
+    height: 35px;
+}
+
+main form input[type="radio"]::after {
+    content: attr(value);
+    width: 90px;
+    height: 35px;
+    background-color: hsl(183, 100%, 15%);
+    box-sizing: border-box;
+    color: white;
+    padding: 5px;
+    display: block;
+    border-radius: 3px;
+    transition: all .3s;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+    font-size: 14pt;
+}
+
+main form input[type="radio"]:hover::after {
+    background-color:hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+
+main form input[type="radio"]:checked::after {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+main form div.selectTip-style-bottom input[type="number"].custom {
+    height: 35px;
+    width: 90px;
+    position: relative;
+    top: -12px;
+    box-sizing: border-box;
+    background-color: hsl(189, 41%, 97%);
+    border: 2px solid hsl(189, 41%, 97%);
+    border-radius: 3px;
+    transition: all .3s;
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+}
+
+main form div.selectTip-style-bottom input[type="number"].custom:hover, main form div.selectTip-style-bottom input[type="number"].custom:focus {
+    border: 2px solid hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+
+main form div.selectTip-style {
+    margin-top: 5px;
+}
+
+main form input[type="number"] {
+    background-color: hsl(189, 41%, 97%);
+    height: 35px;
+    width: 290px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 2px solid hsl(189, 41%, 97%);
+    margin-top: 5px;
+    -moz-appereance: textfield;
+    appearance: textfield;
+    text-align: right;
+    padding: 10px;
+    font-size: 14pt;
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+    color: hsl(183, 100%, 15%);
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+main form input[type="number"]:hover, main form input[type="number"]:focus {
+    border: 2px solid hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+
+main form button.calculateBtn,  main div.showResults button.resetBtn{
+    display: block;
+    width: 260px;
+    height: 40px;
+    margin-top: 35px;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+    font-size: 16pt;
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+main form button.calculateBtn:hover, main div.showResults button.resetBtn:hover {
+    cursor: pointer;
+    background-color: hsl(185, 41%, 84%);
+}
+
+
+/* main show results */
+
+main div.showResults {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+
+main div.showResults h2 {
+    color: white;
+    font-size: 12pt;
+}
+
+main div.showResults h2 span{
+    display: block;
+    font-size: 10pt;
+    color: hsl(184, 14%, 56%);
+}
+
+main div.showResults p {
+    color: hsl(172, 67%, 45%);
+    font-size: 26pt;
+}
+
+main div.showResults button.resetBtn {
+    margin-top: 53px;
+}
